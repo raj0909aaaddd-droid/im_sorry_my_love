@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>I’m Sorry, My Love 🌸</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600&display=swap">
+<style>
+:root{--ink:#fff8fb;--soft:#ffd9e6;--pink:#ff8fb1;--card:rgba(28,14,48,.58);--line:rgba(255,255,255,.22);
+--serif:'Shippori Mincho','Hiragino Mincho ProN',Georgia,serif;--script:'Dancing Script','Segoe Script',cursive;--sans:'Quicksand',system-ui,-apple-system,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--card:rgba(14,7,28,.66)}}
+:root[data-theme="dark"]{--card:rgba(14,7,28,.66)}
+html{scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:#2a1b54;color:var(--ink);font-family:var(--sans);font-size:1.05rem;line-height:1.75;overflow-x:hidden}
+#scene{position:fixed;inset:0;overflow:hidden;z-index:-1;background:linear-gradient(#2a1b54 0%,#7a4aa0 28%,#f08fa8 60%,#ffd2a8 84%)}
+.ly{position:absolute;left:0;right:0;bottom:-30vh;will-change:transform}
+.ly svg{display:block;width:100%;height:62vh}
+#sun{position:absolute;left:50%;top:9vh;width:34vmin;height:34vmin;margin-left:-17vmin;border-radius:50%;background:radial-gradient(circle,#fff3d6 0,#ffb27a 45%,#ff6f91 100%);box-shadow:0 0 12vmin 4vmin rgba(255,150,160,.55)}
+.cl{position:absolute;height:9vh;border-radius:50%;background:rgba(255,255,255,.55);filter:blur(14px);animation:drift linear infinite}
+@keyframes drift{from{transform:translateX(-40vw)}to{transform:translateX(140vw)}}
+#dusk{position:absolute;inset:0;background:linear-gradient(#0d0827,#3a1d63);opacity:0;pointer-events:none}
+#stars span{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;animation:tw 3s ease-in-out infinite}
+@keyframes tw{50%{opacity:.2}}
+.fall{position:fixed;top:-8vh;z-index:5;pointer-events:none;animation:fall linear infinite;opacity:.9}
+@keyframes fall{to{transform:translate3d(var(--dx),112vh,0) rotate(540deg)}}
+main{position:relative;z-index:2}
+section{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12vh 1.25rem;text-align:center}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(2.6rem,11vw,6rem);line-height:1.1;margin:0;text-shadow:0 4px 30px rgba(60,10,70,.6)}
+.hero .sc{font-family:var(--script);font-size:clamp(1.8rem,7vw,3.4rem);color:var(--soft);margin:.4rem 0 1rem}
+.hero p{max-width:30rem;margin:0 auto 1.2rem;text-shadow:0 2px 14px rgba(40,0,50,.7)}
+.jp{font-family:var(--serif);letter-spacing:.3em;color:var(--soft);font-size:1rem;margin-bottom:1rem}
+button:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.arrow{margin-top:2.2rem;font-size:2rem;animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(10px)}}
+.card{background:var(--card);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:28px;padding:2rem 1.5rem;max-width:36rem;width:100%;box-shadow:0 20px 60px rgba(20,0,40,.4)}
+h2{font-family:var(--serif);font-size:clamp(1.7rem,6vw,2.5rem);margin:0 0 1rem;line-height:1.25}
+.card p{margin:.7rem 0}
+.sc2{font-family:var(--script);font-size:1.9rem;color:var(--soft);line-height:1.3}
+ul.pr{list-style:none;padding:0;margin:1.2rem 0 0;text-align:left}
+ul.pr li{display:flex;gap:.8rem;align-items:flex-start;padding:.8rem 0;border-bottom:1px dashed var(--line)}
+ul.pr li:last-child{border:0}
+ul.pr .e{font-size:1.7rem;line-height:1.3}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.2rem}
+.grid div{background:rgba(255,255,255,.1);border:1px solid var(--line);border-radius:20px;padding:1rem .7rem;font-size:.95rem;line-height:1.5}
+.grid b{display:block;font-size:2rem;line-height:1.3}
+.letter{text-align:left;font-family:var(--serif);font-weight:500;line-height:1.95}
+.letter .sig{font-family:var(--script);font-size:2rem;text-align:right;color:var(--soft)}
+.btns{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;margin-top:1.5rem}
+button{font:inherit;font-weight:600;border:0;border-radius:99px;padding:.9rem 1.6rem;cursor:pointer;color:#3a0f3a;background:linear-gradient(135deg,#ffc2d6,#ff8fb1);box-shadow:0 8px 28px rgba(255,100,150,.45);transition:transform .2s}
+button:hover{transform:scale(1.06)}
+button.alt{background:rgba(255,255,255,.14);color:var(--ink);border:1px solid var(--line);box-shadow:none}
+#yes{display:none;margin-top:1.4rem}
+#yes .big{font-family:var(--serif);font-size:clamp(2rem,8vw,3.2rem);line-height:1.2}
+.rv{opacity:0;transform:translateY(24px);transition:opacity 1s,transform 1s}
+.rv.in{opacity:1;transform:none}
+.hp{position:fixed;bottom:-2rem;z-index:20;pointer-events:none;animation:up 3.2s ease-out forwards}
+@keyframes up{to{transform:translateY(-115vh) rotate(var(--r));opacity:0}}
+footer{position:relative;z-index:2;text-align:center;padding:2rem 1rem 3rem;color:var(--soft);font-size:.9rem}
+@media (prefers-reduced-motion:reduce){.cl,.fall,.arrow,#stars span{animation:none}.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="scene" aria-hidden="true">
+  <div class="ly" data-k="-6" style="bottom:auto;top:0"><div id="sun"></div></div>
+  <div class="cl" style="top:14vh;width:38vw;animation-duration:90s"></div>
+  <div class="cl" style="top:30vh;width:30vw;animation-duration:120s;animation-delay:-50s"></div>
+  <div class="cl" style="top:46vh;width:44vw;animation-duration:150s;animation-delay:-90s;opacity:.7"></div>
+  <div class="ly" data-k="2">
+    <svg viewBox="0 0 1600 300" preserveAspectRatio="xMidYMax slice"><path d="M0 300V190Q200 110 400 180T800 160T1200 175T1600 140V300Z" fill="#9a84b8" opacity=".75"/></svg>
+  </div>
+  <div class="ly" data-k="5">
+    <svg viewBox="0 0 1600 700" preserveAspectRatio="xMidYMax slice">
+      <defs><linearGradient id="fg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7b78b8"/><stop offset="1" stop-color="#4a3f82"/></linearGradient>
+      <clipPath id="fc"><path id="fp" d="M120 700C360 610 560 380 700 230L740 205Q800 190 860 205L900 230C1040 380 1240 610 1480 700Z"/></clipPath></defs>
+      <use href="#fp" fill="url(#fg)"/>
+      <g clip-path="url(#fc)"><path d="M590 330L700 230L740 205Q800 190 860 205L900 230L1010 330L960 292L930 330L900 292L860 345L830 296L800 350L770 296L740 345L700 292L670 330L640 292Z" fill="#fff"/>
+      <path d="M740 205Q800 190 860 205L900 230L860 250L800 232L740 250L700 230Z" fill="#ffe6ee" opacity=".7"/></g>
+    </svg>
+  </div>
+  <div class="ly" data-k="10">
+    <svg viewBox="0 0 1600 300" preserveAspectRatio="xMidYMax slice"><path d="M0 300V170Q150 90 330 160T700 150T1050 140T1400 150T1600 110V300Z" fill="#5a4a8c"/></svg>
+  </div>
+  <div class="ly" data-k="17">
+    <svg viewBox="0 0 1600 300" preserveAspectRatio="xMidYMax slice"><path d="M0 300V180Q200 130 450 175T900 165T1350 170T1600 150V300Z" fill="#2a1d52"/><g id="trees" fill="#1a1236"></g>
+      <g fill="#e8374f"><rect x="860" y="118" width="8" height="64"/><rect x="932" y="118" width="8" height="64"/><path d="M846 112H954L946 126H854Z"/><rect x="858" y="134" width="84" height="6"/></g></svg>
+  </div>
+  <div id="dusk"></div><div id="stars"></div>
+</div>
+
+<main>
+<section class="hero">
+  <div class="jp">ごめんなさい ・ 愛してる</div>
+  <h1>I’m so sorry,<br><span class="nm">my love</span> 🌸</h1>
+  <div class="sc">with all my heart 💖</div>
+  <p>I fell asleep without telling you, and I know it hurt you. 🥺 Please scroll down — I made this whole little world just for you. 🗻✨</p>
+  <div class="arrow">🌸⌄</div>
+</section>
+
+<section><div class="card rv">
+  <h2>I know I hurt you 💔</h2>
+  <p>Last night I went to sleep without telling you. No message, no goodnight, no “I’m tired, I love you.” I left you waiting and wondering, and that was wrong of me. 😔</p>
+  <p>You deserved to know, and you deserved to feel important to me — because <b>you are</b>. 🥹</p>
+  <p>I’m not going to make excuses. I just want to say it clearly: <b>I’m sorry.</b> 🙇</p>
+</div></section>
+
+<section><div class="card rv">
+  <h2>I understand how you felt 🥺</h2>
+  <p>Maybe you felt ignored. Maybe you felt worried. Maybe you felt like you didn’t matter. 😢</p>
+  <p>Your feelings are real, and they are valid. I never want to be the reason you feel alone. 🫂</p>
+  <div class="sc2">You’re never just “a message” to me. You’re my whole sky. 🌌</div>
+</div></section>
+
+<section><div class="card rv">
+  <h2>My promises to <span class="nm">you</span> 🤞</h2>
+  <ul class="pr">
+    <li><span class="e">📱</span><span>I will always tell you before I sleep, even if it’s just a tiny message.</span></li>
+    <li><span class="e">🌙</span><span>I will never leave you wondering where I am.</span></li>
+    <li><span class="e">👂</span><span>I will listen when you’re upset, without defending myself first.</span></li>
+    <li><span class="e">💞</span><span>I will show you more often how important you are to me.</span></li>
+    <li><span class="e">🌸</span><span>I will keep choosing you, every single day.</span></li>
+  </ul>
+</div></section>
+
+<section><div class="card rv">
+  <h2>Why I love you so much 💗</h2>
+  <p>Not because it’s easy to say — because it’s true.</p>
+  <div class="grid">
+    <div><b>😊</b>Your smile makes my worst day better</div>
+    <div><b>🤗</b>You make me feel safe and at home</div>
+    <div><b>🌟</b>You shine brighter than anyone I know</div>
+    <div><b>🧸</b>Your heart is so soft and kind</div>
+    <div><b>😂</b>You make me laugh like nobody else</div>
+    <div><b>🫶</b>You make me want to be better</div>
+  </div>
+</div></section>
+
+<section><div class="card rv letter">
+  <h2 style="text-align:center">A letter from my heart 💌</h2>
+  <p>My dearest <span class="nm">love</span>,</p>
+  <p>Like Mount Fuji standing quietly through every season, I want my love for you to be steady, and never go missing. 🗻 Yesterday I let you down, and I will carry that lesson with me.</p>
+  <p>You are my sunrise 🌅, my calm, my favorite person to talk to, and my safest place. I would rather spend a thousand nights saying goodnight to you than one night leaving you wondering. 🌙</p>
+  <p>Please forgive me. I love you more than words can hold. 💖</p>
+  <div class="sig">Forever yours 🌸</div>
+</div></section>
+
+<section><div class="card rv">
+  <div class="jp">許してくれますか？</div>
+  <h2>Will you forgive me? 🥺👉👈</h2>
+  <p>I’ll be right here, loving you either way. 💕</p>
+  <div class="btns">
+    <button id="y">Yes, I forgive you 💖</button>
+    <button id="n" class="alt">I’m still thinking 🤔</button>
+  </div>
+  <p id="nmsg" style="min-height:1.7em;color:var(--soft)"></p>
+  <div id="yes"><div class="big">Thank you, my love! 🥹💞</div>
+    <p>You just made me the happiest person in the world. I promise to love you, protect your heart, and never forget to say goodnight. 🌙🌸</p>
+    <div class="sc2">I love you, forever and always. 💍✨</div></div>
+</div></section>
+</main>
+<footer>Made with all my love 💗 for the one who matters most 🌸</footer>
+
+<script>
+(function(){
+var L=[].slice.call(document.querySelectorAll('.ly')),dusk=document.getElementById('dusk'),stars=document.getElementById('stars');
+function par(){var h=document.documentElement.scrollHeight-innerHeight,p=h>0?Math.min(1,scrollY/h):0;
+L.forEach(function(l){l.style.transform='translate3d(0,'+(-p*l.dataset.k)+'vh,0)'});
+dusk.style.opacity=(p*.7).toFixed(3);stars.style.opacity=Math.max(0,p*1.6-.3).toFixed(2)}
+addEventListener('scroll',par,{passive:true});addEventListener('resize',par);par();
+var t='',i,x,h;
+for(x=10;x<1600;x+=26+Math.random()*22){h=34+Math.random()*50;t+='<polygon points="'+x+','+(190-h)+' '+(x-12)+','+(200)+' '+(x+12)+',200"/><polygon points="'+x+','+(172-h)+' '+(x-10)+','+(188-h/2)+' '+(x+10)+','+(188-h/2)+'"/>'}
+document.getElementById('trees').innerHTML=t.replace(/(\d+\.?\d*),(\d+\.?\d*)/g,function(m,a,b){return (+a).toFixed(0)+','+(+b+30).toFixed(0)});
+for(i=0;i<60;i++){var s=document.createElement('span');s.style.left=Math.random()*100+'%';s.style.top=Math.random()*55+'%';s.style.animationDelay=Math.random()*3+'s';stars.appendChild(s)}
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+if(!rm)for(i=0;i<22;i++){var f=document.createElement('div');f.className='fall';f.textContent=i%4?'🌸':'💮';f.style.left=Math.random()*100+'vw';f.style.fontSize=(.9+Math.random()*.9)+'rem';f.style.setProperty('--dx',(Math.random()*30-10)+'vw');f.style.animationDuration=(9+Math.random()*10)+'s';f.style.animationDelay=(-Math.random()*18)+'s';document.body.appendChild(f)}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in')}})},{threshold:.2});
+document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
+function burst(n){if(rm)n=8;var em=['💖','💕','💗','🌸','💞','✨','🥰','💘'];for(var k=0;k<n;k++){(function(k){setTimeout(function(){var e=document.createElement('div');e.className='hp';e.textContent=em[k%em.length];e.style.left=Math.random()*95+'vw';e.style.fontSize=(1.2+Math.random()*2)+'rem';e.style.setProperty('--r',(Math.random()*120-60)+'deg');document.body.appendChild(e);setTimeout(function(){e.remove()},3300)},k*45)})(k)}}
+document.getElementById('y').onclick=function(){document.getElementById('yes').style.display='block';document.getElementById('nmsg').textContent='';burst(70);this.textContent='Forgiven 💞';setTimeout(function(){document.getElementById('yes').scrollIntoView({behavior:'smooth',block:'center'})},300)};
+var msgs=['That’s okay, I’ll wait right here 🥺','I’ll keep loving you until you’re ready 💕','Sorry again, my love. Please? 🥹👉👈','You’re the best thing in my life 🌸'],mi=0;
+document.getElementById('n').onclick=function(){document.getElementById('nmsg').textContent=msgs[mi++%msgs.length];burst(10)};
+document.querySelector('.hero').addEventListener('click',function(e){if(e.target.tagName!=='INPUT')burst(12)});
+})();
+</script>
+</body>
+</html>
